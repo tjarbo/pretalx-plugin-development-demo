@@ -1,0 +1,38 @@
+[project]
+name = "pretalx-foobar"
+dynamic = ["version"]
+description = "pretalx plugin for pretalx FooBar plugin"
+readme = "README.rst"
+license = {text = "Apache Software License"}
+keywords = ["pretalx"]
+authors = [
+  {name = "Your name", email = "your-email@example.org"},
+]
+maintainers = [
+  {name = "Your name", email = "your-email@example.org"},
+]
+
+dependencies = []
+
+[project.urls]
+homepage = "https://github.com/your-email/pretalx-foobar"
+repository = "https://github.com/your-email/pretalx-foobar.git"
+
+[project.entry-points."pretalx.plugin"]
+pretalx_foobar = "pretalx_foobar:PretalxPluginMeta"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretalx_foobar.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretalx*"]
+
+[tool.check-manifest]
+ignore = [".*"]
