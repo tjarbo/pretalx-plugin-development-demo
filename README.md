@@ -15,12 +15,15 @@ This section documents the steps that I did after starting the devcontainer to r
 
 #### Initial steps I did once:
 
-1. `pip install -e .`
-2. `python3 -m pretalx rebuild --npm-install`
-3. `python3 -m pretalx collectstatic --noinput`
-4. `python3 -m pretalx migrate`
-4. `python3 -m pretalx init`
-4. `python3 -m pretalx create_test_event`
+```bash
+nvm install --lts
+pip install -e .
+python3 -m pretalx rebuild --npm-install
+python3 -m pretalx collectstatic --noinput
+python3 -m pretalx migrate
+python3 -m pretalx init
+python3 -m pretalx create_test_event
+```
 
 #### Commands I execute every time to start the server:
 
